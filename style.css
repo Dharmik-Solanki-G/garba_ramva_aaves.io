@@ -1,0 +1,57 @@
+/* author - deepak tiwari */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff9b77;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 500px;
+    margin: 20px;
+  }
+  
+  .container .tenor-gif-embed {
+    max-width: 200px;
+  }
+  
+  .container .btn {
+    display: flex;
+    gap: 25px;
+  }
+  
+
+
+  h1 {
+    color: white;
+    font-size: 2em;
+    margin-top: 20px;
+    z-index: 5; /* Ensure text is above the background image */
+  }
+  p{
+    color: white;
+  }
+
+  .btn a {
+    margin: 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 5px;
+    z-index: 1; /* Ensure buttons are above the background image */
+  }

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ask Her Out</title>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 80vh;
+        background-color: #ff9b77; /* Optional: Adds a background color */
+      }
+
+      video {
+        max-width: 100%;
+        height: auto;
+        border: none; /* Remove border if any */
+      }
+
+      h1 {
+        color: white;
+        font-size: 2em;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 style="    
+      color: black;
+      font-size: 3em;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+      margin-top: 20px;
+      font-weight: 800;
+      ">
+        You and me!
+      </h1>
+      <!-- Video element with autoplay and no controls -->
+      <video autoplay muted loop>
+        <source src="0910.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <h1>Hehehehe, Tu aavi gai toh maja avi jaay! 😘</h1>
+    </div>
+      <audio id="backgroundMusic" loop>
+        <source src="0910 (1).MP3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+ 
+    <script>
+      var music = document.getElementById('backgroundMusic');
+  
+      // Function to play background music
+      function playBackgroundMusic() {
+        music.play().then(() => {
+          sessionStorage.setItem('isMusicPlaying', 'true'); // Save state to sessionStorage
+        }).catch(error => {
+          console.log("Autoplay prevented. User interaction required.");
+        });
+      }
+  
+      // Load the music state when the page loads
+      window.onload = function() {
+        if (sessionStorage.getItem('isMusicPlaying') === 'true') {
+          playBackgroundMusic(); // Resume playing if music was previously playing
+        }
+      };
+    </script>
+  </body>
+</html>
